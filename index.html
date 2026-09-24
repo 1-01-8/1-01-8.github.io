@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+  Xie Xuemai 的个人主页
+  · 需要换成你自己内容的地方都标了 TODO
+  · 每段文字都有两个版本：lang="zh-CN" 是中文，lang="en" 是英文
+-->
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xie Xuemai</title>
+  <meta name="description" content="Xie Xuemai 的个人主页：项目、经历与联系方式。Personal homepage of Xie Xuemai: projects, experience and contact.">
+  <meta name="author" content="Xie Xuemai">
+  <link rel="canonical" href="https://xiexuemaiproj.me/">
+  <link rel="me" href="https://github.com/1-01-8">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xiexuemaiproj.me/">
+  <meta property="og:title" content="Xie Xuemai">
+  <meta property="og:description" content="Xie Xuemai 的个人主页 · Personal homepage of Xie Xuemai">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // 在页面显示之前选好语言，避免先闪一下另一种语言：
+    // 优先用访客上次的选择，否则看浏览器语言（中文浏览器显示中文，其余显示英文）。
+    (function () {
+      var lang = null;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (lang !== 'zh' && lang !== 'en') {
+        lang = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+      }
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    })();
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span lang="zh-CN">跳到正文</span><span lang="en">Skip to content</span></a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">Xie Xuemai</a>
+      <nav class="site-nav">
+        <a href="#about"><span lang="zh-CN">关于</span><span lang="en">About</span></a>
+        <a href="#projects"><span lang="zh-CN">项目</span><span lang="en">Projects</span></a>
+        <a href="#experience"><span lang="zh-CN">经历</span><span lang="en">Experience</span></a>
+        <a href="#contact"><span lang="zh-CN">联系</span><span lang="en">Contact</span></a>
+      </nav>
+      <!-- 中 / 英切换按钮，文字由 assets/js/main.js 设置 -->
+      <button class="lang-toggle" id="lang-toggle" type="button" hidden>EN</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ 首屏：头像、名字、一句话介绍 ============ -->
+    <section class="hero container">
+      <div class="avatar">
+        <span class="avatar-fallback" aria-hidden="true">X</span>
+        <!-- 默认用你的 GitHub 头像，加载失败时显示上面的字母。
+             想换成照片：把图片放进 assets/img/（例如 assets/img/avatar.jpg），再把 src 改成这个路径 -->
+        <img src="https://avatars.githubusercontent.com/u/75205502?v=4&amp;s=256" alt="" width="104" height="104" decoding="async" onerror="this.hidden = true">
+      </div>
+
+      <!-- TODO: 中文版可以写汉字名，例如 <h1><span lang="zh-CN">你的中文名</span><span lang="en">Xie Xuemai</span></h1> -->
+      <h1>Xie Xuemai</h1>
+
+      <!-- TODO: 写上你的专业或方向，例如「计算机专业学生 · 前端开发」 -->
+      <p class="tagline"><span lang="zh-CN">学生</span><span lang="en">Student</span></p>
+
+      <!-- TODO: 换成你自己的一句话介绍 -->
+      <p class="intro">
+        <span lang="zh-CN">你好，欢迎来到我的个人主页！这里有我做过的项目、我的经历，以及怎样联系我。</span>
+        <span lang="en">Hi, welcome to my homepage! Here you'll find the projects I've built, a bit about my background, and how to get in touch.</span>
+      </p>
+
+      <ul class="hero-links">
+        <li>
+          <a class="btn btn-primary" href="https://github.com/1-01-8">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a class="btn" href="#contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span lang="zh-CN">联系我</span><span lang="en">Contact</span>
+          </a>
+        </li>
+        <!-- 想放简历的话，把 PDF 放进仓库（例如 assets/cv.pdf），再删掉这段注释的首尾两行：
+        <li>
+          <a class="btn" href="assets/cv.pdf"><span lang="zh-CN">简历</span><span lang="en">CV</span></a>
+        </li>
+        -->
+      </ul>
+    </section>
+
+    <!-- ============ 关于我 ============ -->
+    <section class="section container" id="about">
+      <h2 class="section-title"><span lang="zh-CN">关于我</span><span lang="en">About</span></h2>
+      <!-- TODO: 用一两段话介绍自己 -->
+      <div class="prose" lang="zh-CN">
+        <p>这里可以多写一点：在哪所学校读书、学什么专业，平时对哪些技术或话题感兴趣。</p>
+        <p>也可以写写最近在学什么、在做什么，或者正在寻找什么样的机会，比如实习或项目合作。</p>
+      </div>
+      <div class="prose" lang="en">
+        <p>Say a bit more here: where you study, what your major is, and which technologies or topics you're curious about.</p>
+        <p>You could also mention what you're learning or building right now, or the kind of opportunities you're looking for, such as internships or collaborations.</p>
+      </div>
+    </section>
+
+    <!-- ============ 项目 ============ -->
+    <section class="section container" id="projects">
+      <h2 class="section-title"><span lang="zh-CN">项目</span><span lang="en">Projects</span></h2>
+      <ul class="projects">
+        <li class="project">
+          <div class="project-header">
+            <h3><span lang="zh-CN">个人主页</span><span lang="en">Personal website</span></h3>
+            <span class="project-year">2026</span>
+          </div>
+          <p>
+            <span lang="zh-CN">就是你正在看的这个网站：手写 HTML 和 CSS，支持中英文切换和深色模式，托管在 GitHub Pages 上。</span>
+            <span lang="en">The site you're reading: hand-written HTML and CSS with a language switch and dark mode, hosted on GitHub Pages.</span>
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub Pages</li>
+          </ul>
+          <ul class="project-links">
+            <li>
+              <a href="https://github.com/1-01-8/1-01-8.github.io">
+                <span lang="zh-CN">源代码</span><span lang="en">Source</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- TODO: 换成你自己的项目。复制整段 <li class="project"> … </li> 就能再加一个 -->
+        <li class="project">
+          <div class="project-header">
+            <h3><span lang="zh-CN">项目名称</span><span lang="en">Project name</span></h3>
+            <span class="project-year">20XX</span>
+          </div>
+          <p>
+            <span lang="zh-CN">用一两句话说明这个项目是什么、解决了什么问题，以及你在其中做了什么。</span>
+            <span lang="en">A sentence or two on what this project is, the problem it solves, and the part you played in it.</span>
+          </p>
+          <ul class="tags">
+            <li><span lang="zh-CN">用到的技术</span><span lang="en">Tech used</span></li>
+          </ul>
+          <ul class="project-links">
+            <li>
+              <a href="https://github.com/1-01-8">
+                <span lang="zh-CN">代码</span><span lang="en">Code</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ 经历 ============ -->
+    <section class="section container" id="experience">
+      <h2 class="section-title"><span lang="zh-CN">经历</span><span lang="en">Experience</span></h2>
+      <!-- TODO: 换成你的教育、实习、比赛等经历，新的写在上面 -->
+      <ol class="timeline">
+        <li class="timeline-item">
+          <p class="timeline-date">20XX — <span lang="zh-CN">至今</span><span lang="en">Present</span></p>
+          <div>
+            <h3><span lang="zh-CN">学校名称 · 专业</span><span lang="en">University · Major</span></h3>
+            <p><span lang="zh-CN">学位、主要课程、获得的奖项等。</span><span lang="en">Degree, key courses, awards and so on.</span></p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <p class="timeline-date">20XX</p>
+          <div>
+            <h3><span lang="zh-CN">实习 / 比赛 / 社团</span><span lang="en">Internship / competition / club</span></h3>
+            <p><span lang="zh-CN">做了什么、学到了什么、取得了什么成果。</span><span lang="en">What you did, what you learned, and what came of it.</span></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 联系 ============ -->
+    <section class="section container" id="contact">
+      <h2 class="section-title"><span lang="zh-CN">联系</span><span lang="en">Contact</span></h2>
+      <p>
+        <span lang="zh-CN">想交流问题、一起做点什么，或者只是打个招呼，都欢迎联系我。</span>
+        <span lang="en">Questions, ideas for working together, or just saying hi: feel free to get in touch.</span>
+      </p>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label"><span lang="zh-CN">邮箱</span><span lang="en">Email</span></span>
+          <!-- TODO: 换成你的邮箱（两处都要改） -->
+          <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/1-01-8">github.com/1-01-8</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © <span id="year">2026</span> Xie Xuemai ·
+        <span lang="zh-CN">托管于 GitHub Pages</span><span lang="en">Hosted on GitHub Pages</span> ·
+        <a href="https://github.com/1-01-8/1-01-8.github.io"><span lang="zh-CN">源代码</span><span lang="en">Source</span></a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
