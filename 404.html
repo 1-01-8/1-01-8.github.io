@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 访问不存在的地址时 GitHub Pages 会显示这个页面。
+     它可能出现在任意路径下，所以这里的资源都用 / 开头的绝对路径。 -->
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · 解雪迈 Xie Xuemai</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    (function () {
+      var lang = null;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (lang !== 'zh' && lang !== 'en') {
+        lang = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+      }
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    })();
+  </script>
+</head>
+<body>
+  <main class="container notfound">
+    <p class="notfound-code">404</p>
+    <h1><span lang="zh-CN">这个页面走丢了</span><span lang="en">Page not found</span></h1>
+    <p>
+      <span lang="zh-CN">你要找的页面不存在，可能已经被移动或删除。</span>
+      <span lang="en">The page you're looking for doesn't exist, or it may have moved.</span>
+    </p>
+    <a class="btn btn-primary" href="/"><span lang="zh-CN">回到首页</span><span lang="en">Back to home</span></a>
+  </main>
+</body>
+</html>
