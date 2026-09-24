@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <!--
-  Xie Xuemai 的个人主页
-  · 需要换成你自己内容的地方都标了 TODO
-  · 每段文字都有两个版本：lang="zh-CN" 是中文，lang="en" 是英文
+  解雪迈（Xie Xuemai）的个人主页
+  每段文字都有两个版本：lang="zh-CN" 是中文，lang="en" 是英文，改内容时两份都要改。
 -->
 <html lang="zh-CN" data-lang="zh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Xie Xuemai</title>
-  <meta name="description" content="Xie Xuemai 的个人主页：项目、经历与联系方式。Personal homepage of Xie Xuemai: projects, experience and contact.">
-  <meta name="author" content="Xie Xuemai">
+  <title>解雪迈 · Xie Xuemai</title>
+  <meta name="description" content="解雪迈（Xie Xuemai）的个人主页：早稻田大学硕士在读，研究盲源分离，做大模型 Agent 与 RAG 系统。Homepage of Xie Xuemai, a master's student at Waseda University working on blind source separation and LLM agent / RAG systems.">
+  <meta name="author" content="解雪迈 Xie Xuemai">
   <link rel="canonical" href="https://xiexuemaiproj.me/">
   <link rel="me" href="https://github.com/1-01-8">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
   <meta property="og:url" content="https://xiexuemaiproj.me/">
-  <meta property="og:title" content="Xie Xuemai">
-  <meta property="og:description" content="Xie Xuemai 的个人主页 · Personal homepage of Xie Xuemai">
+  <meta property="og:title" content="解雪迈 · Xie Xuemai">
+  <meta property="og:description" content="早稻田大学硕士在读 · 音频信号处理 · 大模型 Agent / Master's student at Waseda University · Audio signal processing · LLM agents">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)">
@@ -42,11 +41,12 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top">Xie Xuemai</a>
+      <a class="brand" href="#top"><span lang="zh-CN">解雪迈</span><span lang="en">Xie Xuemai</span></a>
       <nav class="site-nav">
-        <a href="#about"><span lang="zh-CN">关于</span><span lang="en">About</span></a>
+        <a href="#education"><span lang="zh-CN">教育</span><span lang="en">Education</span></a>
+        <a href="#research"><span lang="zh-CN">研究</span><span lang="en">Research</span></a>
         <a href="#projects"><span lang="zh-CN">项目</span><span lang="en">Projects</span></a>
-        <a href="#experience"><span lang="zh-CN">经历</span><span lang="en">Experience</span></a>
+        <a href="#experience"><span lang="zh-CN">实习</span><span lang="en">Experience</span></a>
         <a href="#contact"><span lang="zh-CN">联系</span><span lang="en">Contact</span></a>
       </nav>
       <!-- 中 / 英切换按钮，文字由 assets/js/main.js 设置 -->
@@ -55,7 +55,7 @@
   </header>
 
   <main id="main">
-    <!-- ============ 首屏：头像、名字、一句话介绍 ============ -->
+    <!-- ============ 首屏 ============ -->
     <section class="hero container">
       <div class="avatar">
         <span class="avatar-fallback" aria-hidden="true">X</span>
@@ -64,141 +64,229 @@
         <img src="https://avatars.githubusercontent.com/u/75205502?v=4&amp;s=256" alt="" width="104" height="104" decoding="async" onerror="this.hidden = true">
       </div>
 
-      <!-- TODO: 中文版可以写汉字名，例如 <h1><span lang="zh-CN">你的中文名</span><span lang="en">Xie Xuemai</span></h1> -->
-      <h1>Xie Xuemai</h1>
+      <h1><span lang="zh-CN">解雪迈</span><span lang="en">Xie Xuemai</span></h1>
 
-      <!-- TODO: 写上你的专业或方向，例如「计算机专业学生 · 前端开发」 -->
-      <p class="tagline"><span lang="zh-CN">学生</span><span lang="en">Student</span></p>
+      <p class="tagline">
+        <span lang="zh-CN">早稻田大学硕士在读 · 音频信号处理 · 大模型 Agent</span>
+        <span lang="en">Master's student at Waseda University · Audio signal processing · LLM agents</span>
+      </p>
 
-      <!-- TODO: 换成你自己的一句话介绍 -->
       <p class="intro">
-        <span lang="zh-CN">你好，欢迎来到我的个人主页！这里有我做过的项目、我的经历，以及怎样联系我。</span>
-        <span lang="en">Hi, welcome to my homepage! Here you'll find the projects I've built, a bit about my background, and how to get in touch.</span>
+        <span lang="zh-CN">我在早稻田大学信息生产系统研究科读硕士，在智能声学系统研究室（牧野研究室）研究盲源分离，本科毕业于大连理工大学数字媒体技术专业。最近主要在做大模型 Agent 与 RAG 系统。</span>
+        <span lang="en">I'm a master's student at Waseda University's Graduate School of Information, Production and Systems, researching blind source separation in the Intelligent Acoustic Systems Lab (Makino Lab). I did my bachelor's in Digital Media Technology at Dalian University of Technology, and these days I mostly build LLM agent and RAG systems.</span>
       </p>
 
       <ul class="hero-links">
         <li>
-          <a class="btn btn-primary" href="https://github.com/1-01-8">
+          <a class="btn btn-primary" href="mailto:xuemaixie@ruri.waseda.jp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span lang="zh-CN">发邮件</span><span lang="en">Email me</span>
+          </a>
+        </li>
+        <li>
+          <a class="btn" href="https://github.com/1-01-8">
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             GitHub
           </a>
         </li>
-        <li>
-          <a class="btn" href="#contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span lang="zh-CN">联系我</span><span lang="en">Contact</span>
-          </a>
-        </li>
-        <!-- 想放简历的话，把 PDF 放进仓库（例如 assets/cv.pdf），再删掉这段注释的首尾两行：
-        <li>
-          <a class="btn" href="assets/cv.pdf"><span lang="zh-CN">简历</span><span lang="en">CV</span></a>
-        </li>
-        -->
       </ul>
     </section>
 
-    <!-- ============ 关于我 ============ -->
-    <section class="section container" id="about">
-      <h2 class="section-title"><span lang="zh-CN">关于我</span><span lang="en">About</span></h2>
-      <!-- TODO: 用一两段话介绍自己 -->
-      <div class="prose" lang="zh-CN">
-        <p>这里可以多写一点：在哪所学校读书、学什么专业，平时对哪些技术或话题感兴趣。</p>
-        <p>也可以写写最近在学什么、在做什么，或者正在寻找什么样的机会，比如实习或项目合作。</p>
-      </div>
-      <div class="prose" lang="en">
-        <p>Say a bit more here: where you study, what your major is, and which technologies or topics you're curious about.</p>
-        <p>You could also mention what you're learning or building right now, or the kind of opportunities you're looking for, such as internships or collaborations.</p>
-      </div>
-    </section>
-
-    <!-- ============ 项目 ============ -->
-    <section class="section container" id="projects">
-      <h2 class="section-title"><span lang="zh-CN">项目</span><span lang="en">Projects</span></h2>
-      <ul class="projects">
-        <li class="project">
-          <div class="project-header">
-            <h3><span lang="zh-CN">个人主页</span><span lang="en">Personal website</span></h3>
-            <span class="project-year">2026</span>
-          </div>
-          <p>
-            <span lang="zh-CN">就是你正在看的这个网站：手写 HTML 和 CSS，支持中英文切换和深色模式，托管在 GitHub Pages 上。</span>
-            <span lang="en">The site you're reading: hand-written HTML and CSS with a language switch and dark mode, hosted on GitHub Pages.</span>
-          </p>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub Pages</li>
-          </ul>
-          <ul class="project-links">
-            <li>
-              <a href="https://github.com/1-01-8/1-01-8.github.io">
-                <span lang="zh-CN">源代码</span><span lang="en">Source</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <!-- TODO: 换成你自己的项目。复制整段 <li class="project"> … </li> 就能再加一个 -->
-        <li class="project">
-          <div class="project-header">
-            <h3><span lang="zh-CN">项目名称</span><span lang="en">Project name</span></h3>
-            <span class="project-year">20XX</span>
-          </div>
-          <p>
-            <span lang="zh-CN">用一两句话说明这个项目是什么、解决了什么问题，以及你在其中做了什么。</span>
-            <span lang="en">A sentence or two on what this project is, the problem it solves, and the part you played in it.</span>
-          </p>
-          <ul class="tags">
-            <li><span lang="zh-CN">用到的技术</span><span lang="en">Tech used</span></li>
-          </ul>
-          <ul class="project-links">
-            <li>
-              <a href="https://github.com/1-01-8">
-                <span lang="zh-CN">代码</span><span lang="en">Code</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ============ 经历 ============ -->
-    <section class="section container" id="experience">
-      <h2 class="section-title"><span lang="zh-CN">经历</span><span lang="en">Experience</span></h2>
-      <!-- TODO: 换成你的教育、实习、比赛等经历，新的写在上面 -->
+    <!-- ============ 教育背景 ============ -->
+    <section class="section container" id="education">
+      <h2 class="section-title"><span lang="zh-CN">教育背景</span><span lang="en">Education</span></h2>
       <ol class="timeline">
         <li class="timeline-item">
-          <p class="timeline-date">20XX — <span lang="zh-CN">至今</span><span lang="en">Present</span></p>
+          <p class="timeline-date">2024.9 — 2026.11</p>
           <div>
-            <h3><span lang="zh-CN">学校名称 · 专业</span><span lang="en">University · Major</span></h3>
-            <p><span lang="zh-CN">学位、主要课程、获得的奖项等。</span><span lang="en">Degree, key courses, awards and so on.</span></p>
+            <h3><span lang="zh-CN">早稻田大学</span><span lang="en">Waseda University</span></h3>
+            <p class="meta"><span lang="zh-CN">信息生产系统研究科 · 硕士</span><span lang="en">Master's, Graduate School of Information, Production and Systems</span></p>
+            <p><span lang="zh-CN">智能声学系统研究室（牧野研究室），导师：<span class="nowrap">牧野昭二</span>。研究方向：盲源分离、神经网络。</span><span lang="en">Intelligent Acoustic Systems Lab (Makino Lab), advised by Prof. Shoji Makino. Research: blind source separation and neural networks.</span></p>
+            <p class="badge"><span lang="zh-CN">CSC 国家公派留学奖学金（2024–2026）</span><span lang="en">China Scholarship Council (CSC) Scholarship, 2024–2026</span></p>
           </div>
         </li>
         <li class="timeline-item">
-          <p class="timeline-date">20XX</p>
+          <p class="timeline-date">2020.9 — 2024.7</p>
           <div>
-            <h3><span lang="zh-CN">实习 / 比赛 / 社团</span><span lang="en">Internship / competition / club</span></h3>
-            <p><span lang="zh-CN">做了什么、学到了什么、取得了什么成果。</span><span lang="en">What you did, what you learned, and what came of it.</span></p>
+            <h3><span lang="zh-CN">大连理工大学</span><span lang="en">Dalian University of Technology</span></h3>
+            <p class="meta"><span lang="zh-CN">数字媒体技术 · 本科</span><span lang="en">Bachelor's, Digital Media Technology</span></p>
           </div>
         </li>
       </ol>
+    </section>
+
+    <!-- ============ 论文与研究 ============ -->
+    <section class="section container" id="research">
+      <h2 class="section-title"><span lang="zh-CN">论文与研究</span><span lang="en">Research</span></h2>
+      <article class="card">
+        <div class="card-header">
+          <h3>
+            <span lang="zh-CN">基于迭代源控制加速卷积传递函数的多通道非负矩阵分解</span>
+            <span lang="en">Accelerated Convolutive Transfer Function-Based Multichannel NMF Using Iterative Source Steering</span>
+          </h3>
+          <span class="card-meta">APSIPA ASC 2025 · <span lang="zh-CN">新加坡</span><span lang="en">Singapore</span></span>
+        </div>
+        <!-- 论文的英文原题，只在中文版显示 -->
+        <p class="card-subtitle zh-only">Accelerated Convolutive Transfer Function-Based Multichannel NMF Using Iterative Source Steering</p>
+        <p class="citation"><strong>Xuemaixie Xie</strong>, Xianrui Wang, Liyuan Zhang, Yichen Yang, Shoji Makino · <em>Proc. APSIPA ASC</em>, 2025, <span class="nowrap">pp. 149–153</span></p>
+        <p class="card-lead">
+          <span lang="zh-CN"><strong>研究课题：</strong>统计信号处理中盲源分离算法迭代速度的优化</span>
+          <span lang="en"><strong>Topic:</strong> speeding up iterative blind source separation algorithms in statistical signal processing</span>
+        </p>
+        <ul class="bullets">
+          <li>
+            <span lang="zh-CN"><strong>研究内容：</strong>多通道盲源分离在强混响场景下的高效求解问题。在卷积传递函数信号模型框架下的多通道非负矩阵分解方法的基础上，提出了基于 Iterative Source Steering（ISS）的加速方法。</span>
+            <span lang="en"><strong>Problem:</strong> solving multichannel blind source separation efficiently under strong reverberation. Building on multichannel NMF under the convolutive transfer function (CTF) signal model, I proposed an acceleration method based on Iterative Source Steering (ISS).</span>
+          </li>
+          <li>
+            <span lang="zh-CN"><strong>算法实现：</strong>以无需矩阵求逆的 ISS 更新替代传统的 Iterative Projection（IP）更新，重新推导出解混矩阵的迭代公式，将每个声源、每个频点的更新复杂度由 O(M³) 降至 O(M²)，消除了随麦克风数立方增长的求逆开销。</span>
+            <span lang="en"><strong>Method:</strong> replaced the conventional Iterative Projection (IP) updates with inversion-free ISS updates and re-derived the demixing-matrix update rules, cutting the per-source, per-frequency cost from O(M³) to O(M²) and removing the inversion overhead that grows with the cube of the number of microphones.</span>
+          </li>
+          <li>
+            <span lang="zh-CN"><strong>研究结论：</strong>基于 TIMIT 语音与 RWCP 混响数据，在 4/6/8 麦克风条件下完成了实验验证：在保持与 IP 方法相当或更优分离性能的同时，运行时间平均下降约 40%，并具有更好的数值稳定性和鲁棒性。</span>
+            <span lang="en"><strong>Results:</strong> in experiments with TIMIT speech and RWCP reverberation using 4, 6 and 8 microphones, the method matched or beat IP's separation performance while cutting runtime by about 40% on average, with better numerical stability and robustness.</span>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ============ 项目经历 ============ -->
+    <section class="section container" id="projects">
+      <h2 class="section-title"><span lang="zh-CN">项目经历</span><span lang="en">Projects</span></h2>
+      <ul class="cards">
+        <li class="card">
+          <div class="card-header">
+            <h3><span lang="zh-CN">面向中文法律咨询的 Multi-Agent 系统</span><span lang="en">Multi-agent system for Chinese legal consultation</span></h3>
+          </div>
+          <p class="card-lead">
+            <span lang="zh-CN">独立完成从 RAG 搭建到 Multi-Agent 的设计与实现，基于 vLLM 实现本地推理。</span>
+            <span lang="en">Designed and built the whole system on my own, from the RAG pipeline to the multi-agent layer, with local inference on vLLM.</span>
+          </p>
+          <ul class="bullets">
+            <li>
+              <span lang="zh-CN"><strong>RAG：</strong>基于现行法规与千条 QA 问答构建向量检索库，作为 agent 的长期语义记忆。针对中文法律检索中“语义相近但法域混淆、具体条号难以稳定命中”的问题，设计了“关键词检索 + 语义检索”的双路召回方案，并通过 RRF、法域预过滤、法规名与条号解析、法律相关性重排等机制提升检索质量；相比扩大召回数量或增加多路查询，该方案主要通过提高候选法条的相关性和排序位置来提升命中率。Recall@10 达到 83.0%，MRR@10 78.0%，p95 检索延迟约 320ms。</span>
+              <span lang="en"><strong>RAG:</strong> built a vector index from current statutes and about a thousand Q&amp;A pairs as the agents' long-term semantic memory. Chinese legal search often returns passages that are semantically close but from the wrong area of law, and misses specific article numbers, so I designed dual-path recall (keyword + semantic search) with RRF fusion, legal-domain pre-filtering, statute-name and article-number parsing, and legal-relevance reranking. Rather than retrieving more candidates or adding more queries, it raises the hit rate by improving the relevance and ranking of candidate articles. Recall@10 reached 83.0% and MRR@10 78.0%, with p95 retrieval latency around 320 ms.</span>
+            </li>
+            <li>
+              <span lang="zh-CN"><strong>Agent 实现：</strong>设计了多 agent 的咨询流程，包含接待、律师、秘书、监管四个 agent 的 ReAct + Agent-as-Tool 编排，接入工具调用与多轮 memory。针对法律问答中“错法条、错引用、乱扩写”的问题，设计了证据优先的生成链路：先判断证据是否足够，不足则改写或拒答；生成后校验引用是否真实来自证据，最终审核。实现为可路由、追问、校验的 Agent 流程。另外设计并实现了合同审查与法律文书生成的 skill，沉淀 SOP 工作流，提高复用性与效率。</span>
+              <span lang="en"><strong>Agents:</strong> designed the consultation flow around four agents (receptionist, lawyer, secretary and supervisor) orchestrated with ReAct and agent-as-tool, with tool calling and multi-turn memory. To curb wrong statutes, wrong citations and embellishment, generation is evidence-first: the system checks whether the evidence is sufficient and otherwise rewrites the query or declines to answer; after generating, it verifies that each citation really comes from the evidence, then runs a final review. The result is an agent flow that can route, ask follow-up questions and verify. I also built skills for contract review and legal document drafting that capture SOP workflows for reuse and efficiency.</span>
+            </li>
+            <li>
+              <span lang="zh-CN"><strong>Harness 工程：</strong>对话历史以 JSON 形式落盘到本地，以 session 与 turn 为单位存储对话单元；保留用户事实与已引用法条，能继承上一轮的法域和法规名。长对话中自动压缩上下文、固定关键证据；会话结束后把成功 / 失败路径写入长期记忆，用于后续路由、检索和失败规避。</span>
+              <span lang="en"><strong>Harness engineering:</strong> conversation history is saved locally as JSON, stored per session and per turn, keeping user facts and cited articles so the next turn inherits the area of law and statute names. Long conversations get automatic context compression with key evidence pinned, and at the end of a session the successful and failed paths are written to long-term memory to guide later routing and retrieval and to avoid repeating failures.</span>
+            </li>
+          </ul>
+          <ul class="tags">
+            <li>Agent</li>
+            <li>RAG</li>
+            <li>vLLM</li>
+            <li>Qdrant</li>
+            <li>BGE-Reranker</li>
+          </ul>
+        </li>
+
+        <li class="card">
+          <div class="card-header">
+            <h3><span lang="zh-CN">后训练范式中在策略蒸馏的消融实验研究</span><span lang="en">Ablation study of on-policy distillation in post-training</span></h3>
+          </div>
+          <p class="card-lead">
+            <span lang="zh-CN">选用 Qwen3-8B 作为教师模型，Qwen3-1.7B 的 Instruct 与 Base 版本作为学生模型进行后训练，在 GSM8K 数据集上对比 SFT、off-policy 蒸馏与 on-policy 蒸馏（OPD）的效果。</span>
+            <span lang="en">Post-trained Qwen3-1.7B students (Instruct and Base) with a Qwen3-8B teacher, comparing SFT, off-policy distillation and on-policy distillation (OPD) on GSM8K.</span>
+          </p>
+          <ul class="bullets">
+            <li>
+              <span lang="zh-CN"><strong>核心结果：</strong>Base 模型经过 OPD 后在测试集上达到 70.9% 准确率，较 SFT 绝对提升 3.3 个百分点，而梯度更新阶段的训练仅消耗 SFT 训练 FLOPs 的 27%。在 CoT 上，OPD 促使学生模型学会教师模型的“思考方式”。</span>
+              <span lang="en"><strong>Key results:</strong> after OPD the Base model reached 70.9% test accuracy, 3.3 points above SFT, while the gradient-update phase used only 27% of SFT's training FLOPs. On chain-of-thought, OPD led the student to pick up the teacher's way of thinking.</span>
+            </li>
+            <li>
+              <span lang="zh-CN"><strong>灾难性遗忘：</strong>Instruct 学生模型的基准准确率为 74.7%，SFT 后反而降至 60.7%；OPD 则保持在 75.7%，无显著遗忘。KL 散度损失约束学生分布不过度偏离教师，减少了遗忘。</span>
+              <span lang="en"><strong>Catastrophic forgetting:</strong> from the Instruct student's 74.7% baseline, SFT dropped accuracy to 60.7%, while OPD held it at 75.7% with no significant forgetting. The KL-divergence loss keeps the student's distribution close to the teacher's, which limits forgetting.</span>
+            </li>
+          </ul>
+          <ul class="tags">
+            <li>TRL</li>
+            <li>LoRA</li>
+            <li>bitsandbytes</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ 实习经历 ============ -->
+    <section class="section container" id="experience">
+      <h2 class="section-title"><span lang="zh-CN">实习经历</span><span lang="en">Experience</span></h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <p class="timeline-date">2026.4 — <span lang="zh-CN">至今</span><span lang="en">Present</span></p>
+          <div>
+            <h3><span lang="zh-CN">上海衍想智能科技公司</span><span lang="en">Shanghai Yanxiang Intelligent Technology</span></h3>
+            <p class="meta"><span lang="zh-CN">前后端研发实习 · AIGC / AI native 初创公司（天使轮）</span><span lang="en">Full-stack development intern · Angel-stage AIGC / AI-native startup</span></p>
+            <ul class="bullets">
+              <li>
+                <span lang="zh-CN"><strong>Agent：</strong>搭建 RAG 三层评测 harness：第一层 retriever-only，以 Hit@K / MRR 验证知识召回；第二层 gateway E2E，通过 SSE 回放和 request_trace_id 回捞真实 Agent 检索事件；第三层 LLM-as-judge，基于 rubric 输出 coverage、missing points、unsupported claims 与 groundedness，实现 RAG 质量从召回、调用到答案可信度的闭环评估。</span>
+                <span lang="en"><strong>Agents:</strong> built a three-layer RAG evaluation harness: a retriever-only layer that checks knowledge recall with Hit@K / MRR; a gateway end-to-end layer that replays SSE streams and uses request_trace_id to pull real agent retrieval events; and a rubric-based LLM-as-judge layer that scores coverage, missing points, unsupported claims and groundedness. Together they close the loop on RAG quality, from recall and tool calls to how trustworthy the answer is.</span>
+              </li>
+              <li>
+                <span lang="zh-CN"><strong>前端优化：</strong>主导视频剪辑工作台的架构重构，将 3,700+ 行的单体页面拆解为时间轴模型、播放控制、素材管理和 FFmpeg 导出模块，显著降低状态耦合，提升多轨剪辑、音频处理与导出链路的可维护性。</span>
+                <span lang="en"><strong>Front end:</strong> led the architectural refactor of the video-editing workbench, splitting a 3,700+ line monolithic page into timeline model, playback control, asset management and FFmpeg export modules. This sharply reduced state coupling and made multi-track editing, audio processing and the export pipeline easier to maintain.</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 专业技能 ============ -->
+    <section class="section container" id="skills">
+      <h2 class="section-title"><span lang="zh-CN">专业技能</span><span lang="en">Skills</span></h2>
+      <dl class="skills">
+        <div>
+          <dt><span lang="zh-CN">语言能力</span><span lang="en">Languages</span></dt>
+          <dd>
+            <span lang="zh-CN">英语四六级，日语 JLPT N2，具备中英双语文献阅读能力，能在英语环境下开展学习研究。</span>
+            <span lang="en">English (CET-4 and CET-6) and Japanese (JLPT N2). Comfortable reading literature in Chinese and English, and studying and doing research in English.</span>
+          </dd>
+        </div>
+        <div>
+          <dt><span lang="zh-CN">Agent 开发</span><span lang="en">Agent development</span></dt>
+          <dd>
+            <span lang="zh-CN">了解 ReAct、Plan-and-Execute 任务规划与执行架构，Skills、MCP 等 Agent 前沿技术；深入理解 Context Engineering、Harness Engineering 等 Agent 工程范式；了解 OpenClaw、Hermes 等前沿项目。</span>
+            <span lang="en">ReAct and plan-and-execute architectures, Skills and MCP; a solid grasp of context engineering and harness engineering; familiar with projects such as OpenClaw and Hermes.</span>
+          </dd>
+        </div>
+        <div>
+          <dt><span lang="zh-CN">深度学习框架</span><span lang="en">Deep learning</span></dt>
+          <dd>
+            <ul class="tags">
+              <li>PyTorch</li>
+              <li>Lightning</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Matplotlib</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt><span lang="zh-CN">工程与实验</span><span lang="en">Engineering</span></dt>
+          <dd>
+            <span lang="zh-CN">具备 Linux 环境下的开发与模型训练经验；使用 Git 管理代码，遵循开发流程；熟练使用 Codex、Claude Code 等工具，会使用 Spec Coding 规范进行开发。</span>
+            <span lang="en">Development and model training on Linux; Git-based workflows; daily use of Codex and Claude Code, with spec-driven development.</span>
+          </dd>
+        </div>
+      </dl>
     </section>
 
     <!-- ============ 联系 ============ -->
     <section class="section container" id="contact">
       <h2 class="section-title"><span lang="zh-CN">联系</span><span lang="en">Contact</span></h2>
       <p>
-        <span lang="zh-CN">想交流问题、一起做点什么，或者只是打个招呼，都欢迎联系我。</span>
-        <span lang="en">Questions, ideas for working together, or just saying hi: feel free to get in touch.</span>
+        <span lang="zh-CN">欢迎联系我交流研究、项目或工作机会。</span>
+        <span lang="en">Feel free to reach out about research, projects or job opportunities.</span>
       </p>
       <ul class="contact-list">
         <li>
           <span class="contact-label"><span lang="zh-CN">邮箱</span><span lang="en">Email</span></span>
-          <!-- TODO: 换成你的邮箱（两处都要改） -->
-          <a href="mailto:your-email@example.com">your-email@example.com</a>
+          <a href="mailto:xuemaixie@ruri.waseda.jp">xuemaixie@ruri.waseda.jp</a>
         </li>
         <li>
           <span class="contact-label">GitHub</span>
@@ -211,7 +299,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>
-        © <span id="year">2026</span> Xie Xuemai ·
+        © <span id="year">2026</span> <span lang="zh-CN">解雪迈</span><span lang="en">Xie Xuemai</span> ·
         <span lang="zh-CN">托管于 GitHub Pages</span><span lang="en">Hosted on GitHub Pages</span> ·
         <a href="https://github.com/1-01-8/1-01-8.github.io"><span lang="zh-CN">源代码</span><span lang="en">Source</span></a>
       </p>

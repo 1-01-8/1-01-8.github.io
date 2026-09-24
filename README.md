@@ -1,6 +1,6 @@
 # 1-01-8.github.io
 
-Xie Xuemai 的个人主页，托管在 GitHub Pages 上，域名是 [xiexuemaiproj.me](https://xiexuemaiproj.me)。
+解雪迈（Xie Xuemai）的个人主页，托管在 GitHub Pages 上，域名是 [xiexuemaiproj.me](https://xiexuemaiproj.me)。
 
 这是一个纯静态网站（HTML + CSS + 一点 JavaScript），不需要安装任何工具，也没有构建步骤：改好文件推送到 `main` 分支，GitHub 就会自动发布。
 
@@ -8,7 +8,7 @@ Xie Xuemai 的个人主页，托管在 GitHub Pages 上，域名是 [xiexuemaipr
 
 | 文件 | 作用 |
 | --- | --- |
-| `index.html` | 主页内容：自我介绍、项目、经历、联系方式 |
+| `index.html` | 主页内容：简介、教育、论文、项目、实习、技能、联系方式 |
 | `404.html` | 访问不存在的地址时显示的页面 |
 | `assets/css/style.css` | 样式：颜色、字体、布局，会跟随系统切换深色模式 |
 | `assets/js/main.js` | 右上角的中 / 英切换按钮 |
@@ -18,10 +18,11 @@ Xie Xuemai 的个人主页，托管在 GitHub Pages 上，域名是 [xiexuemaipr
 
 ## 修改内容
 
-打开 `index.html`，要换成你自己内容的地方都标了 `TODO`。
+内容都在 `index.html` 里，按板块用注释分开（教育背景、论文与研究、项目经历、实习经历、专业技能、联系）。
 
-- **中英双语**：每段文字都写了两份，`lang="zh-CN"` 是中文，`lang="en"` 是英文。浏览器语言是中文的访客默认看到中文，其他人默认看到英文，右上角按钮可以切换。只想保留一种语言的话，删掉另一种语言的那些行，再删掉切换按钮即可。
-- **添加项目**：复制一整段 `<li class="project"> … </li>`，改掉标题、描述、标签和链接。
+- **中英双语**：每段文字都写了两份，`lang="zh-CN"` 是中文，`lang="en"` 是英文，改的时候两份都要改。浏览器语言是中文的访客默认看到中文，其他人默认看到英文，右上角按钮可以切换。只想保留一种语言的话，删掉另一种语言的那些行，再删掉切换按钮即可。
+- **添加项目**：复制「项目经历」里一整段 `<li class="card"> … </li>`，改掉标题、描述、要点和标签。
+- **添加经历**：复制「教育背景」或「实习经历」里一整段 `<li class="timeline-item"> … </li>`，新的放在上面。
 - **头像**：默认显示你的 GitHub 头像（加载不出来时显示字母 X）。想换成照片，把图片放进 `assets/img/`，再把 `index.html` 里头像的 `src` 改成这个路径。
 - **主题色**：改 `assets/css/style.css` 开头的 `--accent`，深色模式那一段里也有一个。
 
